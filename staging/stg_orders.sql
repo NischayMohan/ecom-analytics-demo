@@ -1,8 +1,12 @@
--- stg_orders.sql
 SELECT
-    order_id,
-    customer_id,
-    DATE(order_date) AS order_date,
-    status,
-    CAST(total_amount AS NUMERIC) AS total_amount
+    Row AS order_id,           -- use Row as unique order identifier
+    DATE AS order_date,
+    Months AS month,
+    CUSTOMER AS customer_id,
+    Style AS product_style,
+    SKU AS product_sku,
+    Size AS product_size,
+    PCS AS quantity,
+    RATE AS price,
+    `GROSS AMT` AS total_amount
 FROM {{ source('dbt_demo_raw', 'orders') }}
