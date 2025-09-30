@@ -1,11 +1,15 @@
-name: ecom_analytics_demo 
+name: ecom_analytics_demo
 profile: ecom_project
 target-path: "target"
 clean-targets:
   - "target"
   - "dbt_modules"
 
-model-paths: ["models"]
+model-paths: 
+  - "staging"
+  - "dimension_tables"
+  - "facts_table"
+
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
 data-paths: ["data"]
@@ -14,9 +18,3 @@ macro-paths: ["macros"]
 models:
   ecom_analytics_demo:
     +materialized: table
-
-model-paths:
-  - "staging"
-  - "dimension_tables"
-  - "facts_table"
-
