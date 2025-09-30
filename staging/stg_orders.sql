@@ -1,5 +1,4 @@
-SELECT
-    ROW AS order_id,           -- 'ROW' in uppercase
+select         -- 'ROW' in uppercase
     DATE AS order_date,
     Months AS month,
     CUSTOMER AS customer_id,
