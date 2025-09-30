@@ -1,5 +1,5 @@
 SELECT
-    Row AS order_id,           -- use Row as unique order identifier
+    ROW AS order_id,           -- 'ROW' in uppercase
     DATE AS order_date,
     Months AS month,
     CUSTOMER AS customer_id,
