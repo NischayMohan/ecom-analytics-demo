@@ -14,3 +14,9 @@ macro-paths: ["macros"]
 models:
   ecom_analytics_demo:
     +materialized: table
+
+model-paths:
+  - "staging"
+  - "dimension_tables"
+  - "facts_table"
+
