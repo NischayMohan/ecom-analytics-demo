@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: dbt_demo_raw    # your raw schema in the warehouse
+    tables:
+      - name: orders
+      - name: order_items
+      - name: customers
+      - name: products
+      - name: categories
