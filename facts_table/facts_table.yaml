@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: fact_orders
+    description: "Fact table containing order-level metrics aggregated from staging tables."
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order"
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: "ID of the customer who placed the order"
+        tests:
+          - not_null
+      - name: order_date
+        description: "Date when the order was placed"
+        tests:
+          - not_null
+      - name: product_count
+        description: "Number of distinct products in the order"
+      - name: total_quantity
+        description: "Total quantity of products in the order"
+      - name: total_revenue
+        description: "Total revenue of the order (sum of total_amount)"
